@@ -85,12 +85,9 @@ X-Powered-By: PHP/7.1.2
 
 ## 三、配置说明
 
-`application/config`下的`deveopment`、`production`、`testing`对应`index.php`中的不同环境，可将`database.php`等需要修改的配置文件移到对应目录下，当框架环境对应的目录里存在配置文件时会优先读取。
-
-`application/constants.php`中可以配置打开或关闭日志、多数据库对应常量。日志存放在`apaplication/logs`目录下。
-
-`application/caller.php`为请求相关配置信息。
-
-`application/models`可由`CodeIgniter-CodeHelper`中直接生成后使用。
-
-签名流程在`application/service/api_sign_service.php`中，可根据需要调整。
+- `application/config`下的`deveopment`、`production`、`testing`对应`index.php`中的不同环境，可将`database.php`等需要修改的配置文件移到对应目录下，当框架环境对应的目录里存在配置文件时会优先读取。
+- `application/constants.php`中可以配置打开或关闭日志、多数据库对应常量。日志存放在`apaplication/logs`目录下。
+- `application/caller.php`为请求相关配置信息。
+- `application/models`可由`CodeIgniter-CodeHelper`中直接生成后使用。
+- 签名流程在`application/service/api_sign_service.php`中，可根据需要调整。
+- 接口文档示例和签名文档在`doc`目录
