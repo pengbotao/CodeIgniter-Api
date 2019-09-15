@@ -55,6 +55,8 @@ class ActiveRecord extends CI_Model
             foreach($where as $key => $val) {
                 if(is_array($val)) {
                     $this->db->where_in($key, $val);
+                } elseif(is_int($key) && $key < 0){
+                    $this->db->where($val);
                 } else {
                     $this->db->where($key, $val);
                 }
@@ -88,6 +90,8 @@ class ActiveRecord extends CI_Model
             foreach($where as $key => $val) {
                 if(is_array($val)) {
                     $this->db->where_in($key, $val);
+                } elseif(is_int($key) && $key < 0){
+                    $this->db->where($val);
                 } else {
                     $this->db->where($key, $val);
                 }
@@ -112,6 +116,8 @@ class ActiveRecord extends CI_Model
             foreach($where as $key => $val) {
                 if(is_array($val)) {
                     $this->db->where_in($key, $val);
+                } elseif(is_int($key) && $key < 0){
+                    $this->db->where($val);
                 } else {
                     $this->db->where($key, $val);
                 }
@@ -134,6 +140,8 @@ class ActiveRecord extends CI_Model
             foreach($where as $key => $val) {
                 if(is_array($val)) {
                     $this->db->where_in($key, $val);
+                } elseif(is_int($key) && $key < 0){
+                    $this->db->where($val);
                 } else {
                     $this->db->where($key, $val);
                 }
@@ -162,6 +170,8 @@ class ActiveRecord extends CI_Model
             foreach($where as $key => $val) {
                 if(is_array($val)) {
                     $this->db->where_in($key, $val);
+                } elseif(is_int($key) && $key < 0){
+                    $this->db->where($val);
                 } else {
                     $this->db->where($key, $val);
                 }
@@ -190,6 +200,8 @@ class ActiveRecord extends CI_Model
             foreach($where as $key => $val) {
                 if(is_array($val)) {
                     $this->db->where_in($key, $val);
+                } elseif(is_int($key) && $key < 0){
+                    $this->db->where($val);
                 } else {
                     $this->db->where($key, $val);
                 }
