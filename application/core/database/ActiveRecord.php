@@ -30,7 +30,7 @@ class ActiveRecord extends CI_Model
      */
     public function updateByPk($pk, $attributes, $where = array())
     {
-        $where = array_merge(array($this->primaryKey() => $pk), $where);
+        $where = array($this->primaryKey() => $pk) + $where;
         return $this->updateAll($attributes, $where);
     }
 
@@ -74,7 +74,7 @@ class ActiveRecord extends CI_Model
      */
     public function deleteByPk($pk, $where = array())
     {
-        $where = array_merge(array($this->primaryKey() => $pk), $where);
+        $where = array($this->primaryKey() => $pk) + $where;
         return $this->deleteAll($where);
     }
 
@@ -110,7 +110,7 @@ class ActiveRecord extends CI_Model
      */
     public function findByPk($pk, $where = array())
     {
-        $where = array_merge(array($this->primaryKey() => $pk), $where);
+        $where = array($this->primaryKey() => $pk) + $where;
         $this->db->from($this->tableName());
         if(! empty($where)) {
             foreach($where as $key => $val) {
